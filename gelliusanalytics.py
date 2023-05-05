@@ -27,7 +27,7 @@ def extract_chapters(xml_file):
     return book_dict
 
 def preprocess_book(book_dict):
-    print('Starting to preprocess book by filtering out the stop words and tokenize the words ...')
+    print('Starting to preprocess book by filtering out the stop words and tokenizing the words ...')
     cltk_nlp = NLP(language="lat")
     cltk_nlp.pipeline.processes.pop(-1)
     tokenized_book_dict = {}
