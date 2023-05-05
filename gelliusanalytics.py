@@ -52,7 +52,7 @@ def preprocess_book(book_dict):
     print('Starting to preprocess book by filtering out the stop words and tokenizing the words ...')
     # Initialize the CLTK NLP object with the Latin language
     cltk_nlp = NLP(language="lat")
-    # cltk_nlp.pipeline.processes.pop(-1)
+    cltk_nlp.pipeline.processes.pop(-1)
     # Initialize the CLTK NLP object with the Latin language
     tokenized_book_dict = {}
     # Loop over each book and its chapters in the book dictionary
