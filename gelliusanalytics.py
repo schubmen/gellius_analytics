@@ -104,15 +104,15 @@ if __name__ == "__main__":
     xml_file = os.path.join(script_dir, 'data/books.xml')
 
     book_dict = extract_chapters(xml_file)
-    saveAsJSONFile(script_dir, 'book_dict_json', book_dict)
+    saveAsJSONFile(script_dir, 'data/book_dict.json', book_dict)
     
     preprocessed_book_dict=preprocess_book(book_dict)
-    saveAsJSONFile(script_dir, 'preprocessed_book_dict.json', preprocessed_book_dict)
+    saveAsJSONFile(script_dir, 'data/preprocessed_book_dict.json', preprocessed_book_dict)
 
     top_words_all_books = get_top_words_all_books(preprocessed_book_dict)
-    saveAsJSONFile(script_dir, 'top_words_all_books.json', top_words_all_books)
+    saveAsJSONFile(script_dir, 'data/top_words_all_books.json', top_words_all_books)
 
     top_words_per_book = get_top_words_per_book(preprocessed_book_dict)
-    saveAsJSONFile(script_dir, 'top_words_per_book.json', top_words_per_book)
+    saveAsJSONFile(script_dir, 'data/top_words_per_book.json', top_words_per_book)
 
     print('Work is done ...')
