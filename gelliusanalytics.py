@@ -101,7 +101,7 @@ def saveAsJSONFile(script_dir, filename, file):
 
 if __name__ == "__main__":
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    xml_file = os.path.join(script_dir, 'books.xml')
+    xml_file = os.path.join(script_dir, 'data/books.xml')
 
     book_dict = extract_chapters(xml_file)
     saveAsJSONFile(script_dir, 'book_dict_json', book_dict)
